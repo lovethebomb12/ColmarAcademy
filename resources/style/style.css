@@ -1,17 +1,45 @@
 /* Global Styles */
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+
 }
 
+p {
+  line-height: 1.25;
+}
+h1, h3 {
+  color: #404040;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
 .container {
-  min-width: 800px;
+  max-width: 1024px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.container:nth-child(2n) {
+  background-color: lightgray;
 }
 
 /* Header Styles*/
 
-header .container {
+header.container {
+  max-width: 1024px;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,7 +53,6 @@ header .logo {
   justify-content: center;
   align-items: center;
   height: 2rem;
-  padding-left: 1.5rem;
 }
 
 header .logo h4 {
@@ -44,4 +71,39 @@ header nav ul {
 
 nav li {
   padding-left: 1rem;
+}
+
+/* Hero Styles */
+
+.hero.container {
+  justify-content: flex-start;
+}
+
+.large-image {
+  width: 60%;
+  margin-right: 1.5rem;
+}
+
+.large-image img {
+  width: 100%;
+}
+
+.cta {
+  margin-right: 2rem;
+  max-width: 19rem;
+}
+
+.cta h1 {
+  padding-bottom: 1.25rem;
+}
+
+.button {
+  margin-top: 24px;
+  background-color: #404040;
+}
+
+.button p {
+  color: #ffffff;
+  padding: 0.5rem 0;
+  text-align: center;
 }
