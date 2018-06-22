@@ -31,7 +31,7 @@ h3 {
 }
 .container {
   max-width: 1024px;
-  padding: 1rem 1.5rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,13 +70,39 @@ font-weight: 300;
 color: gray;
 }
 
-header nav ul, footer nav ul {
+header nav.desktop ul, footer nav ul {
   display: flex;
   padding-right: 1.5rem;
 }
 
+nav.mobile {
+  display: none;
+}
+
 nav li {
   padding-left: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+
+  nav.desktop, header .logo {
+    display: none;
+  }
+
+  nav.mobile {
+    display: block;
+    width: 100%;
+  }
+
+  nav.mobile ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav.mobile ul li {
+    padding: 0;
+  }
 }
 
 /* Hero Styles */
@@ -120,6 +146,28 @@ nav li {
   text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+
+  .hero.container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .large-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .cta {
+    padding: 1rem 0;
+    display: block;
+    min-width: 92%;
+    padding: 2rem 0;
+    margin: 0 auto;
+  }
+  .cta h1 {
+    padding-bottom: 2rem;
+  }
+}
 /* Info Section Styles */
 
 .infoblock.container {
@@ -188,7 +236,7 @@ p.attribution {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 1rem 0;
+  padding: 1rem 0;
 }
 
 .courses.container h2 {
