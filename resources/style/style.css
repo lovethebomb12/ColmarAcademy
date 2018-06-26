@@ -3,7 +3,6 @@
 html {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-
 }
 
 p {
@@ -11,6 +10,7 @@ p {
   font-size: 14px;
   color: #828282;
 }
+
 h1, h3 {
   color: #404040;
   line-height: 1.4;
@@ -20,15 +20,18 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
 }
+
 h2 {
   font-size: 1.7rem;
   font-weight: 600;
   padding: 2rem 0 1.5rem 0;
 }
+
 h3 {
   font-size: 1.25rem;
   font-weight: 500;
 }
+
 .container {
   max-width: 1024px;
 
@@ -40,6 +43,15 @@ h3 {
 
 .container:nth-child(2n) {
   background-color: lightgray;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+  .container:nth-child(2n) {
+    background-color: white;
+  }
 }
 
 /* Header Styles*/
@@ -214,6 +226,10 @@ p.attribution {
   height: auto;
 }
 
+img.mobile {
+  display: none;
+}
+
 .info-text {
   width: 65%;
 }
@@ -227,6 +243,43 @@ p.attribution {
 .info-text a {
   font-size: 0.75rem;
   color: blue;
+}
+
+@media screen and (max-width: 480px) {
+  .infoblock .large-image {
+    display: none;
+  }
+  .infoblock {
+    border-bottom: lightgray solid 1px;
+  }
+
+  .info-stack, .info-img {
+    width: 100%;
+  }
+
+  .info-img img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .info {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: flex-start;
+  }
+  img.desktop {
+    display: none;
+  }
+  img.mobile {
+    display: inline-block;
+  }
+  .info-text {
+    padding: 1rem 0 2rem 1rem;
+  }
+  .info:nth-child(3n) {
+    padding-bottom: 0;
+    background-color: white;
+  }
 }
 
 /* Courses Section Styles */
@@ -253,7 +306,7 @@ p.attribution {
 }
 
 .course {
-  max-width: 29%;
+  width: 29%;
   margin: 1rem 1rem;
   background-color: white;
   padding-bottom: 0.5rem;
@@ -271,6 +324,47 @@ p.attribution {
 
 .course-text p {
   padding-top: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+
+ .courses.container {
+   align-items: stretch;
+   padding: 1rem 1rem 2rem 1rem;
+   max-width: 100%;
+   margin: auto;
+   border-bottom: 1px solid lightgray;
+
+ }
+  .courses.container h2 {
+    text-align: center;
+    margin: 1rem auto;
+  }
+  .course img {
+    display: none;
+  }
+  .course-text p {
+    display: none;
+  }
+
+  .course-block {
+    flex-direction: column;
+
+    padding: 0;
+
+  }
+
+  .course {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0 1.5rem 0;
+    margin: 0 0 0.5rem 0;
+
+    background-color: lightgray;
+  }
+  .course h3 {
+    width: 100%;
+  }
 }
 
 /* Thesis Section Styles */
@@ -301,6 +395,18 @@ p.attribution {
   padding: 1.5rem 0 .5rem 0;
 }
 
+@media screen and (max-width: 480px) {
+  .thesis-block .info-stack, .thesis-block .large-image-text {
+  display: none;
+  }
+  .thesis-block .large-image {
+    padding-bottom: 1.5rem;
+  }
+  .thesis h2 {
+  padding-bottom: 1rem;
+  }
+}
+
 /* Footer Styling */
 
 footer {
@@ -316,7 +422,7 @@ footer {
 }
 
 .copyright, footer nav {
-  padding-top: 1rem;
+  padding: 1rem 0;
 }
 
 footer p {
@@ -325,5 +431,10 @@ footer p {
 footer nav ul a {
   color: #828282;
   font-size: 0.75rem;
+}
 
+@media screen and (max-width: 480px) {
+  footer {
+    height: auto;
+  }
 }
